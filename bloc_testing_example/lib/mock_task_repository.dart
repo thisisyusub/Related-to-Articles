@@ -24,7 +24,7 @@ class MockTaskRepository implements ITaskRepository {
     await Future.delayed(const Duration(seconds: 2));
 
     final urgentTasks =
-        List<Task>.from(mockTasks.where((task) => !task.isUrgent));
+        List<Task>.from(mockTasks.where((task) => task.isUrgent));
 
     return urgentTasks;
   }
